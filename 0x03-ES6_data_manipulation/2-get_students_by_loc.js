@@ -1,10 +1,10 @@
-const getStudentsByLocation = (students) => {
+const getStudentsByLocation = (students, city) => {
     if (!Array.isArray(students)) {
         return [];
     }
 
-    const studentsSanFrancisco = students.filter(student => student.location === 'San Francisco');
-    return studentsSanFrancisco;
+    const studentsInCity = students.filter(student => student.location === city);
+    return studentsInCity;
 }
 
 export default getStudentsByLocation;
